@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>从业人员健康证明 - 验证通过</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdn.jsdelivr.net/npm/font-awesome@4.7.0/css/font-awesome.min.css" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#0052cc',
+                        'primary-light': '#e6edf7',
+                        'primary-lighter': '#f2f7ff',
+                        success: '#00b42a',
+                        neutral: '#2c3e50',
+                    },
+                    fontFamily: {
+                        sans: ['"Noto Sans SC"', '"Microsoft YaHei"', 'sans-serif'],
+                    },
+                }
+            }
+        }
+    </script>
+    <style type="text/tailwindcss">
+        @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .section-divider {
+                height: 1px;
+                background: linear-gradient(90deg, transparent, #cbd5e1, transparent);
+            }
+            .card-hover {
+                transition: transform 0.2s ease, box-shadow 0.2s ease;
+            }
+            .card-hover:hover {
+                transform: translateY(-2px);
+                box-shadow: 0 8px 24px rgba(0, 82, 204, 0.12);
+            }
+        }
+    </style>
+</head>
+<body class="bg-primary-light min-h-screen font-sans text-neutral">
+    <!-- 顶部官方横幅 -->
+    <header class="bg-primary text-white shadow-md">
+        <div class="max-w-5xl mx-auto px-4 py-3 flex flex-col md:flex-row justify-between items-center">
+            <div class="flex items-center gap-3 mb-2 md:mb-0">
+                <i class="fa fa-building-o text-xl"></i>
+                <div>
+                    <h1 class="text-lg font-bold">南京卫生健康委员会</h1>
+                    <p class="text-xs opacity-80">从业人员健康证明防伪系统</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-4">
+                <a href="#" class="text-white/90 hover:text-white text-sm flex items-center gap-1 transition-colors">
+                    <i class="fa fa-question-circle"></i> 帮助中心
+                </a>
+                <a href="#" class="text-white/90 hover:text-white text-sm flex items-center gap-1 transition-colors">
+                    <i class="fa fa-phone"></i> 025-12320
+                </a>
+            </div>
+        </div>
+    </header>
+
+    <!-- 主内容区 -->
+    <main class="max-w-5xl mx-auto px-4 py-8">
+        <!-- 验证状态卡片 -->
+        <div class="bg-white rounded-xl shadow-sm p-6 mb-8 card-hover">
+            <div class="flex flex-col md:flex-row justify-between items-start md:items-center mb-6">
+                <div>
+                    <h2 class="text-xl font-bold text-primary mb-1">从业人员预防性健康检查合格证明</h2>
+                    <p class="text-gray-500 text-sm">官方防伪验证结果</p>
+                </div>
+                <div class="mt-4 md:mt-0 bg-success/10 text-success px-4 py-1.5 rounded-full text-sm font-medium flex items-center gap-2">
+                    <i class="fa fa-check-circle"></i>
+                    <span>验证通过 · 真实有效</span>
+                </div>
+            </div>
+
+            <!-- 个人信息区 -->
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- 左侧照片区 -->
+                <div class="flex justify-center lg:justify-start">
+                    <div class="relative">
+                        <div class="w-36 h-48 border border-gray-200 rounded-lg overflow-hidden shadow-sm">
+                            <img src="https://cloudflareimg.cdn.sn/i/69397750a85f5_1765373776.webp" alt="体检人员照片" class="w-full h-full object-cover">
+                        </div>
+                        <!-- 电子签章 -->
+                        <div class="absolute -bottom-2 -right-2 w-24 h-24 bg-white/90 border-2 border-success rounded-full flex flex-col justify-center items-center transform rotate-6">
+                            <i class="fa fa-check text-success"></i>
+                            <span class="text-[10px] font-bold text-success text-center">官方认证</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧信息网格 -->
+                <div class="lg:col-span-2 grid grid-cols-1 sm:grid-cols-2 gap-x-6 gap-y-4">
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">姓名</label>
+                        <p class="text-base font-medium">王志文</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">性别</label>
+                        <p class="text-base font-medium">男</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">年龄</label>
+                        <p class="text-base font-medium">30岁</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">证件号码</label>
+                        <p class="text-base font-medium">832779182</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">从业类别</label>
+                        <p class="text-base font-medium">食品、饮用水、化妆品、公共场所</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">体检机构</label>
+                        <p class="text-base font-medium">南京疾病预防控制中心</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">发证日期</label>
+                        <p class="text-base font-medium">2025年11月12日</p>
+                    </div>
+                    <div>
+                        <label class="block text-xs text-gray-500 mb-1">有效期至</label>
+                        <p class="text-base font-medium text-success">2026年11月12日（有效）</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- 防伪信息与验证详情 -->
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-8">
+            <!-- 防伪特征 -->
+            <div class="bg-white rounded-xl shadow-sm p-5 card-hover">
+                <h3 class="text-primary font-semibold mb-4 flex items-center gap-2">
+                    <i class="fa fa-shield"></i> 防伪特征
+                </h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-0.5"></i>
+                        <span>内置加密二维码，与证明信息唯一绑定</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-0.5"></i>
+                        <span>电子签章含隐形防伪码，支持官方核验</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-0.5"></i>
+                        <span>信息实时同步至卫健委数据库，不可篡改</span>
+                    </li>
+                    <li class="flex items-start gap-2">
+                        <i class="fa fa-check-circle text-primary mt-0.5"></i>
+                        <span>有效期动态校验，过期自动标记</span>
+                    </li>
+                </ul>
+            </div>
+
+            <!-- 验证详情 -->
+            <div class="bg-white rounded-xl shadow-sm p-5 card-hover">
+                <h3 class="text-primary font-semibold mb-4 flex items-center gap-2">
+                    <i class="fa fa-info-circle"></i> 验证详情
+                </h3>
+                <ul class="space-y-3 text-sm">
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">验证时间</span>
+                        <span class="font-medium" id="verifyTime"></span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">验证方式</span>
+                        <span class="font-medium">二维码扫描</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">数据来源</span>
+                        <span class="font-medium">南京卫健委数据库</span>
+                    </li>
+                    <li class="flex justify-between">
+                        <span class="text-gray-500">验证次数</span>
+                        <span class="font-medium">第3次验证</span>
+                    </li>
+                </ul>
+            </div>
+        </div>
+
+        <!-- 官方声明 -->
+        <div class="bg-primary-lighter border border-primary/20 rounded-xl p-5">
+            <h3 class="text-primary font-semibold mb-3 flex items-center gap-2">
+                <i class="fa fa-gavel"></i> 官方声明
+            </h3>
+            <p class="text-sm text-gray-600 leading-relaxed">
+                本验证结果由南京卫生健康委员会官方系统生成，与纸质证明具有同等法律效力。任何单位或个人不得伪造、变造、买卖本证明，违者将依法追究法律责任。如对验证结果有异议，请联系025-12320核实。
+            </p>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer class="bg-primary text-white/80 mt-10 py-5">
+        <div class="max-w-5xl mx-auto px-4 text-center text-xs">
+            <p>© 2026 南京卫生健康委员会 版权所有 | 苏ICP备12345678号-1</p>
+            <p class="mt-1">官方网站：www.whwjw.gov.cn | 举报邮箱：jubao@whwjw.gov.cn</p>
+        </div>
+    </footer>
+
+    <script>
+        // 生成实时验证时间
+        window.onload = function() {
+            const now = new Date();
+            const pad = (n) => n.toString().padStart(2, '0');
+            const timeStr = `${now.getFullYear()}-${pad(now.getMonth()+1)}-${pad(now.getDate())} ${pad(now.getHours())}:${pad(now.getMinutes())}:${pad(now.getSeconds())}`;
+            document.getElementById('verifyTime').textContent = timeStr;
+        };
+    </script>
+</body>
+
+</html>
